@@ -1,40 +1,38 @@
 import { AppLoading } from "expo";
 import * as Font from "expo-font";
-import React, { useState } from "react";
-
+import React, { Component } from "react";
+import { Root } from "native-base";
 
 import MainStackNavigator from "./screens/navigation/MainStackNavigator";
 
-async function loadResourcesAsync() {
-  await Promise.all([
-    Font.loadAsync({
-      "Segoe-UI": require("./assets/fonts/Segoe-UI.ttf")
-    })
-  ]);
-}
+export default class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { loading: true };
+  }
 
-function handleLoadingError(error) {
-  // In this case, you might want to report the error to your error reporting
-  // service, for example Sentry
-  console.warn(error);
-}
+  async componentDidMount() {
+    await Font.loadAsync({
+      "Roboto": require("native-base/Fonts/Roboto.ttf"),
+      "Roboto_medium": require("native-base/Fonts/Roboto_medium.ttf"),
+      "Segoe-UI": require("./assets/fonts/Segoe-UI.ttf"),
+    });
+    this.setState({ loading: false });
+  }
 
-function handleFinishLoading(setLoadingComplete) {
-  setLoadingComplete(true);
-}
-
-export default function App(props) {
-  const [isLoadingComplete, setLoadingComplete] = useState(false);
-
-  if (!isLoadingComplete && !props.skipLoadingScreen) {
-    return (
-      <AppLoading
-        startAsync={loadResourcesAsync}
-        onError={handleLoadingError}
-        onFinish={() => handleFinishLoading(setLoadingComplete)}
-      />
-    );
-  } else {
-    return <MainStackNavigator />;
+  render() {
+    if (this.state.loading) {
+      return (
+        <Root>
+          <AppLoading />
+        </Root>
+      );
+    } else {
+      return (
+        <Root>
+          <MainStackNavigator />
+        </Root>
+      );
+    }
   }
 }

@@ -5,7 +5,14 @@ import { Root } from "native-base";
 
 import MainStackNavigator from "./screens/navigation/MainStackNavigator";
 
-export default class App extends Component {
+interface IProps {
+}
+
+interface IState {
+  loading: boolean;
+}
+
+export default class App extends React.Component<IProps, IState> {
   constructor(props) {
     super(props);
     this.state = { loading: true };

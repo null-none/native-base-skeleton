@@ -10,7 +10,7 @@ import { StyleSheet } from "react-native";
 import { connect } from "react-redux";
 
 import { loading } from "./reducer/appReducer";
-import LexPons from "../constants/theme/App";
+import Thema from "../constants/theme/App";
 
 interface IProps {
   loading: boolean;
@@ -27,7 +27,7 @@ class App extends React.Component<IProps, IState> {
 
   render() {
     return (
-      <StyleProvider style={getTheme(LexPons)}>
+      <StyleProvider style={getTheme(Thema)}>
         <Container style={LexPons.paddingContainter}>
           <Content>
             <Grid>

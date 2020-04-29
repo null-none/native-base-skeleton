@@ -28,7 +28,7 @@ class App extends React.Component<IProps, IState> {
   render() {
     return (
       <StyleProvider style={getTheme(Thema)}>
-        <Container style={LexPons.paddingContainter}>
+        <Container>
           <Content>
             <Grid>
               <Row>

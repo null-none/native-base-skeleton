@@ -1,4 +1,4 @@
-# Native base skeleton
+# Native base starter
 
 A simple starter project for React Native + NativeBase + React Navigation + Redux on iOS and Android.
 

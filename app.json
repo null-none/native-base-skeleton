@@ -4,7 +4,7 @@
   "expo": {
     "name": "app",
     "slug": "native-base-skeleton",
-    "sdkVersion": "37.0.0",
+    "sdkVersion": "37.0.12",
     "version": "1.0.0",
     "entryPoint": "node_modules/expo/AppEntry.js",
     "ios": {
@@ -17,8 +17,7 @@
     },
     "platforms": [
       "ios",
-      "android",
-      "web"
+      "android"
     ]
   }
 }

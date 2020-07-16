@@ -6,7 +6,7 @@ import zh from "./lang/zh";
 
 i18n.fallbacks = true;
 i18n.translations = { en, zh };
-if (["en", "en"].indexOf(Localization.locale) == -1) {
+if (["en", "zh"].indexOf(Localization.locale) == -1) {
   i18n.locale = "en";
 } else {
   i18n.locale = Localization.locale;

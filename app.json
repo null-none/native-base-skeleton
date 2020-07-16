@@ -1,23 +1,12 @@
 {
-  "name": "Native Base Skeleton",
-  "displayName": "Native Base Skeleton",
+  "name": "starter",
+  "displayName": "starter",
   "expo": {
-    "name": "app",
-    "slug": "native-base-skeleton",
-    "sdkVersion": "38.0.0",
+    "name": "starter",
+    "slug": "starter",
     "version": "1.0.0",
-    "entryPoint": "node_modules/expo/AppEntry.js",
-    "ios": {
-      "bundleIdentifier": "native.bae.skeleton",
-      "buildNumber": "1.0.0"
-    },
-    "android": {
-      "package": "native.bae.skeleton",
-      "versionCode": 1
-    },
-    "platforms": [
-      "ios",
-      "android"
+    "assetBundlePatterns": [
+      "**/*"
     ]
   }
 }

@@ -43,7 +43,7 @@ class App extends React.Component<IProps, IState> {
   }
 }
 
-const mapDispatchToProps = dispatch => {
+const mapDispatchToProps = (dispatch: any) => {
   return {
     onLoading: () => {
       return dispatch(loading());
@@ -51,7 +51,7 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
-const mapStateToProps = state => {
+const mapStateToProps = (state: any) => {
   return {
     loading: state.app.loading
   };

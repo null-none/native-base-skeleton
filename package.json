@@ -2,7 +2,6 @@
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
-    "web": "expo start --web",
     "start": "react-native start",
     "postinstall": "cp node_modules/@expo/vector-icons/FontAwesome.js node_modules/@expo/vector-icons/Fontisto.js",
     "test": "jest"

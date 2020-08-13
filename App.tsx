@@ -2,11 +2,11 @@ import { AppLoading } from "expo";
 import * as Font from "expo-font";
 import React, { Component } from "react";
 import { Root } from "native-base";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 import MainStackNavigator from "./screens/navigation/MainStackNavigator";
 
-interface IProps {
-}
+interface IProps {}
 
 interface IState {
   loading: boolean;
@@ -20,8 +20,8 @@ export default class App extends React.Component<IProps, IState> {
 
   async componentDidMount() {
     await Font.loadAsync({
-      "Roboto": require("native-base/Fonts/Roboto.ttf"),
-      "Roboto_medium": require("native-base/Fonts/Roboto_medium.ttf")
+      Roboto: require("native-base/Fonts/Roboto.ttf"),
+      Roboto_medium: require("native-base/Fonts/Roboto_medium.ttf"),
     });
     this.setState({ loading: false });
   }
@@ -29,15 +29,17 @@ export default class App extends React.Component<IProps, IState> {
   render() {
     if (this.state.loading) {
       return (
-        <Root>
+        <SafeAreaView>
           <AppLoading />
-        </Root>
+        </SafeAreaView>
       );
     } else {
       return (
-        <Root>
-          <MainStackNavigator />
-        </Root>
+        <SafeAreaView>
+          <Root>
+            <MainStackNavigator />
+          </Root>
+        </SafeAreaView>
       );
     }
   }

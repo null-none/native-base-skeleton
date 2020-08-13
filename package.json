@@ -1,5 +1,4 @@
 {
-  "main": "index.tsx",
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
@@ -7,32 +6,36 @@
     "test": "jest"
   },
   "dependencies": {
+    "expo": "~38.0.1",
+    "expo-splash-screen": "^0.3.1",
+    "expo-status-bar": "^1.0.0",
+    "expo-updates": "~0.2.10",
+    "react": "~16.11.0",
+    "react-dom": "~16.11.0",
+    "react-native": "~0.62.2",
+    "react-native-gesture-handler": "~1.6.0",
+    "react-native-reanimated": "~1.9.0",
+    "react-native-screens": "~2.9.0",
+    "react-native-unimodules": "~0.10.1",
+    "react-native-web": "~0.11.7",
     "@react-native-community/masked-view": "^0.1.10",
     "@react-navigation/native": "^5.7.0",
     "@react-navigation/stack": "^5.7.0",
     "color": "^3.1.2",
-    "expo": "~38.0.1",
     "expo-localization": "^8.2.1",
-    "expo-splash-screen": "^0.3.1",
-    "expo-status-bar": "^1.0.0",
-    "expo-updates": "~0.2.8",
     "i18n-js": "^3.7.1",
     "native-base": "^2.13.13",
-    "react": "~16.11.0",
-    "react-dom": "~16.11.0",
-    "react-native": "~0.62.2",
     "react-native-easy-grid": "^0.2.2",
-    "react-native-gesture-handler": "~1.6.0",
-    "react-native-reanimated": "~1.9.0",
-    "react-native-screens": "~2.9.0",
-    "react-native-unimodules": "~0.10.0",
-    "react-native-web": "~0.11.7",
+    "react-native-safe-area-context": "~3.0.7",
     "react-redux": "^7.2.0",
     "redux": "^4.0.5",
     "redux-thunk": "^2.3.0"
   },
   "devDependencies": {
     "@babel/core": "~7.9.0",
+    "babel-jest": "~25.2.6",
+    "jest": "~25.2.6",
+    "react-test-renderer": "~16.11.0",
     "@types/react": "~16.9.23",
     "@types/react-dom": "~16.9.8",
     "@types/react-native": "~0.61.23",
@@ -43,5 +46,7 @@
   "jest": {
     "preset": "react-native"
   },
-  "private": true
+  "private": true,
+  "name": "native-base-starter",
+  "version": "1.0.0"
 }

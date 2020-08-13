@@ -1,24 +1,19 @@
 import React from "react";
 import { Col, Row, Grid } from "react-native-easy-grid";
-import {
-  Container,
-  Content,
-  getTheme,
-  StyleProvider,
-} from "native-base";
+import { Container, Content, Text, StyleProvider } from "native-base";
 import { StyleSheet } from "react-native";
 import { connect } from "react-redux";
 
 import { loading } from "./reducer/appReducer";
-import Theme from "../constants/theme/App";
+import getTheme from "../theme/components";
+import platform from "../theme/variables/platform";
 
 interface IProps {
   loading: boolean;
   navigation: any;
 }
 
-interface IState {
-}
+interface IState {}
 
 class App extends React.Component<IProps, IState> {
   constructor(props: IProps) {
@@ -27,12 +22,13 @@ class App extends React.Component<IProps, IState> {
 
   render() {
     return (
-      <StyleProvider style={getTheme(Theme)}>
+      <StyleProvider style={getTheme(platform)}>
         <Container>
           <Content>
             <Grid>
               <Row>
                 <Col>
+                  <Text>Starter</Text>
                 </Col>
               </Row>
             </Grid>
@@ -47,17 +43,16 @@ const mapDispatchToProps = (dispatch: any) => {
   return {
     onLoading: () => {
       return dispatch(loading());
-    }
+    },
   };
 };
 
 const mapStateToProps = (state: any) => {
   return {
-    loading: state.app.loading
+    loading: state.app.loading,
   };
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
 
-const styles = StyleSheet.create({
-});
+const styles = StyleSheet.create({});

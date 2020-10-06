@@ -18,6 +18,9 @@ interface IState {}
 class App extends React.Component<IProps, IState> {
   constructor(props: IProps) {
     super(props);
+    this.props.navigation.setOptions({
+      title: "Starter",
+    });
   }
 
   render() {
@@ -55,4 +58,5 @@ const mapStateToProps = (state: any) => {
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+});

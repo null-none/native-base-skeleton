@@ -13,7 +13,7 @@ interface IState {
 }
 
 export default class App extends React.Component<IProps, IState> {
-  constructor(props) {
+  constructor(props: any) {
     super(props);
     this.state = { loading: true };
   }

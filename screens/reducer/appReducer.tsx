@@ -4,7 +4,7 @@ const initialState = {
   loading: false,
 };
 
-export default function reducer(state = initialState, action) {
+export default function reducer(state = initialState, action: any) {
   switch (action.type) {
     default:
       return state;
